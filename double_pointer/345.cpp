@@ -1,9 +1,4 @@
-#include <iostream>
-#include <set>
-#include <string>
-using namespace std;
-
-//防止string越界
+#include "header.h"
 class Solution {
 private:
     set<char> dict = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
@@ -27,11 +22,3 @@ public:
         return s;
     }
 };
-
-int main(int argc, char* argv[]) {
-    string s = "bbbb";
-    Solution test;
-    string ans = test.reverseVowels(s);
-    cout << ans;
-    return 0;
-}

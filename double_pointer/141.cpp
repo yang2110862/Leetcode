@@ -1,6 +1,5 @@
-#include <iostream>
-using namespace std;
-//经典判圈法
+#include "header.h"
+
 struct ListNode {
     int val;
     ListNode *next;
@@ -16,7 +15,7 @@ public:
         ListNode* slow = head;
         ListNode* fast = head->next;
         while (slow != fast) {
-            if (fast == nullptr || fast->next == nullptr) {   //思考这个条件
+            if (fast == nullptr || fast->next == nullptr) {
                 return false;
             }
             slow = slow->next;

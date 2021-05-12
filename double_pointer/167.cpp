@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
-
+#include "header.h"
 class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
@@ -21,14 +17,3 @@ public:
         return {-1, -1};
     }
 };
-
-int main(int argc, char* argv[]) {
-    Solution test;
-    vector<int> numbers = {2, 7, 11, 15};
-    int target = 9;
-    vector<int> ans = test.twoSum(numbers, target);
-    for (auto x : ans) {
-        cout << x << endl;
-    }
-    return 0;
-}

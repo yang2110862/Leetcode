@@ -1,10 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
-
-//好题，分解问题，分块解决
-
+#include "header.h"
 class Solution {
 private:
     bool isSubstr(string s, string target) {
@@ -36,11 +30,3 @@ public:
         return ans;
     }
 };
-
-int main(int argc, char* argv[]) {
-    Solution test;
-    string s = "abpcplea";
-    vector<string> d = {"ale", "apple", "monkey", "plea"};
-    string ans = test.findLongestWord(s, d);
-    cout << ans;
-}

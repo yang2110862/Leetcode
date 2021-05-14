@@ -11,7 +11,7 @@ public:
 private:
     int rob(vector<int>& nums, int beg, int end) {
         int first = nums[beg], second = max(nums[beg], nums[beg + 1]);
-        for (int i = start + 2; i <= end; ++i) {
+        for (int i = beg + 2; i <= end; ++i) {
             int temp = second;
             second = max(first + nums[i], second);
             first = temp;

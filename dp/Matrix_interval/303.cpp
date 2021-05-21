@@ -5,8 +5,8 @@ public:
     NumArray(vector<int>& nums) {
         int n = nums.size();
         sums.resize(n + 1);
-        sums[0] = nums[0];
-        for (int i = 1; i <= n; ++i) sums[i] = sums[i - 1] + nums[i];
+        sums[0] = 0;
+        for (int i = 1; i <= n; ++i) sums[i] = sums[i - 1] + nums[i - 1];
     }
     
     int sumRange(int left, int right) {

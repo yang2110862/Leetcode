@@ -8,9 +8,7 @@ public:
             squares.emplace_back(i * i);   //一会试试push back
         }
         queue<int> q;
-        vector<int> mem(n + 1, 0);
         q.push(n);
-        mem[n] = 1;
         int ans = 0;
         //开始bfs
         while (!q.empty()) {

@@ -7,7 +7,7 @@ public:
         vector<long> dp(amount + 1, INT_MAX);
         dp[0] = 0;
         for (auto coin : coins) {
-            for (int i = 0; i <= amount; ++i) {
+            for (int i = coin; i <= amount; ++i) {
                 dp[i] = min(dp[i], dp[i - coin] + 1);
             }
         }

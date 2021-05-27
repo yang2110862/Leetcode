@@ -10,7 +10,7 @@ public:
         vector<int> dp(target + 1);
         dp[0] = 1;
         for (auto num : nums) {
-            for (int i = target; i >= num; --i) {
+            for (int i = target; i >= num; --i) {   //注意i要大于等于num,不然越界，同时也剪了枝
                 dp[i] = dp[i] + dp[i - num];
             }
         }

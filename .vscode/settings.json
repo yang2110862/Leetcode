@@ -4,6 +4,7 @@
         "utility": "cpp",
         "algorithm": "cpp",
         "set": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "limits": "cpp"
     }
 }

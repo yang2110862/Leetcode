@@ -5,6 +5,7 @@
         "algorithm": "cpp",
         "set": "cpp",
         "xstring": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "xutility": "cpp"
     }
 }

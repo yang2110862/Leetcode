@@ -1,20 +1,33 @@
 #include "header.h"
 
 class Solution {
+private:
+    int subarraySum(vector<int>& nums, int k) {
+        map<int, int> map;
+        map[0] = 1;
+        int pre = 0;
+        int cnt = 0;
+        for (auto num : nums) {
+            pre += num;
+            if (map.find(pre - k) != map.end()) {
+                cnt += map[pre - k];
+            }
+            ++map[pre];
+        }
+        return cnt;
+    }
 public:
     int numSubmatrixSumTarget(vector<vector<int>>& matrix, int target) {
         int m = matrix.size();
         int n = matrix[0].size();
         int ans = 0;
-        for (int x1 = 1; x1 <= m; ++x1) {
-            for (int y1 = 1; y1 <= n; ++y1) {
-                vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
-                for (int x2 = x1; x2 <= m; ++x2) {
-                    for (int y2 = y1; y2 <= n; ++y2) {
-                        dp[x2][y2] = dp[x2 - 1][y2] + dp[x2][y2 - 1] - dp[x2 - 1][y2 - 1] + matrix[x2 - 1][y2 - 1];
-                        if (dp[x2][y2] == target) ++ans;
-                    }
+        for (int i = 0; i < m; ++i) {
+            vector<int> pre(n);
+            for (int j = i; j < m; ++j) {
+                for (int k = 0; k < n; ++k) {
+                    pre[k] += matrix[j][k];
                 }
+                ans += subarraySum(pre, target);
             }
         }
         return ans;

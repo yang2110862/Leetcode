@@ -16,6 +16,6 @@ public:
     }
     
     int sumRegion(int row1, int col1, int row2, int col2) {
-        return dp[row2 + 1][col2 + 1] - dp[row1 - 2][col2 - 1] - dp[row2 - 1][col1 - 2] + dp[row1 - 1][col1 - 1];
+        return dp[row2 + 1][col2 + 1] - dp[row1][col2 + 1] - dp[row2 + 1][col1] + dp[row1][col1];
     }
 };

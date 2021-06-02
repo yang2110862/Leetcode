@@ -17,7 +17,7 @@ public:
             int cap = queries[i][2];
             bool low = false;
             bool high = false;
-            long long eat_max = cap * (day + 1);
+            long long eat_max = (long long)cap * (day + 1);
             if (eat_max >= (pre[type] - candiesCount[type] + 1)) high = true;
             long long eat_min = day + 1;
             if (eat_min <= pre[type]) low = true;
@@ -26,14 +26,3 @@ public:
         return ans;
     }
 };
-
-int main() {
-    Solution test;
-    vector<int> candiesCount{5,2,6,4,1};
-    vector<vector<int>> queries{{3,1,2},{4,10,3},{3,10,100},{4,100,30},{1,3,1}};
-    auto ans = test.canEat(candiesCount, queries);
-    for (auto x : ans) {
-        cout << x << " ";
-    }
-    return 0;
-}

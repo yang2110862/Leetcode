@@ -1,9 +1,8 @@
 #include "header.h"
-
+#include <ctime>
 int main() {
-    vector<int> arr;
-    arr.resize(10);
-    arr.emplace_back(11);
-    cout << arr.size();
+    double ans;
+    ans = 1.0 * 5 / 12 * 4 / 12 * 3 / 11 ;
+    cout << ans;
     return 0;
 }

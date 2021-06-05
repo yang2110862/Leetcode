@@ -19,10 +19,3 @@ public:
         return ans;
     }
 };
-
-int main() {
-    Solution test;
-    vector<int> nums{0,1};
-    cout << test.findMaxLength(nums);
-    return 0;
-}

@@ -11,7 +11,7 @@ struct TreeNode {
 
 class Solution {
 public:
-    int longestUnivaluePath(TreeNode* root) {
+    TreeNode* trimBST(TreeNode* root, int low, int high) {
 
     }
 };

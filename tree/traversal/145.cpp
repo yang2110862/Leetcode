@@ -11,7 +11,7 @@ struct TreeNode {
 
 class Solution {
 public:
-    vector<int> preorderTraversal(TreeNode* root) {
+    vector<int> postorderTraversal(TreeNode* root) {
         if (!root) return {};
         vector<int> res;
         stack<TreeNode*> st;

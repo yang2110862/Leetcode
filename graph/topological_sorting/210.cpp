@@ -21,7 +21,7 @@ private:
         result.push_back(u);
     }
 public:
-    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
         edges.resize(numCourses);
         visited.resize(numCourses);
         for (const auto& arr : prerequisites) {
@@ -32,7 +32,8 @@ public:
                 dfs(i);
             }
         }
-        if (!valid) return false;
-        return true;
+        if (!valid) return {};
+        reverse(result.begin(), result.end());
+        return result;
     }
 };

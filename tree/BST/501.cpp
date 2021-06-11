@@ -20,7 +20,7 @@ private:
         if (root->val == base) {
             ++cnt;
         } else {
-            cnt == 1;
+            cnt = 1;
             base = root->val;
         }
         if (cnt == maxCnt) {

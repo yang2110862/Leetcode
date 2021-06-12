@@ -7,6 +7,7 @@
         "xstring": "cpp",
         "limits": "cpp",
         "xutility": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "queue": "cpp"
     }
 }

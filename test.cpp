@@ -1,8 +1,7 @@
 #include "header.h"
 #include <ctime>
 int main() {
-    double ans;
-    ans = 3/ 2;
+    string a = "avdfr";
+    string ans(a.rbegin(), a.rend());
     cout << ans;
-    return 0;
 }

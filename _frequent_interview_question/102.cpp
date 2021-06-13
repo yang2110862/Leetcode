@@ -12,7 +12,7 @@ struct TreeNode {
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
-        if (!root) return {{}};
+        if (!root) return {};
         vector<vector<int>> ans;
         queue<TreeNode*> que;
         que.push(root);

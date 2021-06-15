@@ -8,7 +8,7 @@ public:
         for (int i = 0; i < n; ++i) {
             if (s[i] == '(') stk.push(i);
             else if (s[i] == ')') {
-                if (stk.empty()) s[i] == ' ';
+                if (stk.empty()) s[i] = ' ';
                 else stk.pop();
             }
         }

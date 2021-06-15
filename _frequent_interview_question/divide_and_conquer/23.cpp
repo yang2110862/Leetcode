@@ -39,6 +39,7 @@ private:
     }
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
+        if (lists.size() == 0) return nullptr;
         ListNode* ans = new ListNode;
         return mergeLists(lists, 0, lists.size() - 1);
     }

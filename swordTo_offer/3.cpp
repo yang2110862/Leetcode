@@ -9,5 +9,6 @@ public:
             if (mp.count(nums[i])) return nums[i];
             else ++mp[nums[i]];
         }
+        return -1;
     }
 };

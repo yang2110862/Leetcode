@@ -8,10 +8,10 @@ public:
         int n = matrix[0].size();
         if (n == 0) return false;
         int x = 0, y = n - 1;
-        while (x >= 0 && y >= 0 && x < matrix.size() && y < matrix[0].size()) {
+        while (x >= 0 && y >= 0 && x < m && y < n) {
             if (matrix[x][y] == target) return true;
-            else if (matrix[x][y] > target) --n;
-            else ++m;
+            else if (matrix[x][y] > target) --y;
+            else ++x;
         }
         return false;
     }

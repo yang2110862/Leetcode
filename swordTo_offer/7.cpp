@@ -7,20 +7,23 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 class Solution {
+private:
+    unordered_map<int, int> mp;
+    vector<int> preorder;
+    TreeNode* recur(int root, int left, int right) {
+        if (left > right) return nullptr;
+        TreeNode* ans = new TreeNode(preorder[root]);
+        int mid = mp[preorder[root]];
+        ans->left = recur(root + 1, left, mid - 1);
+        ans->right = recur(mid - left + root + 1, mid + 1, right);
+        return ans;
+    }
 public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        TreeNode* root = new TreeNode(preorder[0]);
-        int x = preorder[0];
-        preorder.erase(preorder.begin());
-        int index;
+        this->preorder = preorder;
         for (int i = 0; i < inorder.size(); ++i) {
-            if (inorder[i] == x) {
-                index = i;
-                inorder.erase(inorder.begin() + i);
-            }
+            mp[inorder[i]] = i;
         }
-        if (index != 0) {
-            root->
-        }
+        return recur(0, 0, preorder.size() - 1);
     }
 };

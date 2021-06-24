@@ -33,16 +33,13 @@ public:
 
 class Solution {
 private:
-    unordered_set<string> owed;
     void backtrack(string temp, string s, vector<string>& ans, vector<bool>& visited) {
         if (temp.size() == s.size()) {
-            if (owed.count(temp)) return;
             ans.push_back(temp);
-            owed.insert(temp);
             return;
         }
         for (int i = 0; i < s.size(); ++i) {
-            if (visited[i] || (j > 0 && s[i - 1] == s[i])) continue;
+            if (i > 0 && s[i - 1] == s[i] && !visited[i - 1]) continue;
             if (!visited[i]) {
                 visited[i] = true;
                 backtrack(temp + s[i], s, ans, visited);

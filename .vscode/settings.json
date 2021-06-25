@@ -8,6 +8,7 @@
         "limits": "cpp",
         "xutility": "cpp",
         "unordered_map": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "xhash": "cpp"
     }
 }

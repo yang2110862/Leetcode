@@ -9,6 +9,12 @@
         "xutility": "cpp",
         "unordered_map": "cpp",
         "queue": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "stack": "cpp",
+        "xlocinfo": "cpp",
+        "xtree": "cpp",
+        "unordered_set": "cpp"
     }
 }

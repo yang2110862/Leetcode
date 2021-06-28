@@ -1,10 +1,8 @@
 #include "header.h"
 #include <ctime>
 int main() {
-    int x = 3;
-    int y = 5;
-    string ans;
-    ans += to_string(x);
-    ans += to_string(y);
-    cout << ans;
+    unordered_set<int> s{1,2,3};
+    for (auto x : s) {
+        cout << x;
+    }
 }

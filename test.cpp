@@ -1,8 +1,16 @@
 #include "header.h"
 #include <ctime>
+#include <cstring>
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    // TreeNode(): val
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
 int main() {
-    unordered_set<int> s{1,2,3};
-    for (auto x : s) {
-        cout << x;
-    }
+    string s = "3";
+    cout << stoi(s);
+    return 0;
 }

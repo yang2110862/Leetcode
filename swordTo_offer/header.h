@@ -14,6 +14,9 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <functional>
+#include <sstream>
+#include <list>
+#include <cstring>
 using namespace std;
 
 #endif

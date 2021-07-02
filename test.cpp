@@ -10,7 +10,7 @@ struct TreeNode {
 };
 
 int main() {
-    string s = "3";
-    cout << stoi(s);
-    return 0;
+    int x = 3;
+    ++x;
+    cout << x;
 }

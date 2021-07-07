@@ -9,3 +9,6 @@ string b(s.rbegin(), s.rend())
 stol(s)
 atoi(c)
 to_string(n)
+
+最小值和最大值
+*max_element(beg, end) *min_element(beg, end)

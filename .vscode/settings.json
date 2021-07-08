@@ -17,5 +17,6 @@
         "xtree": "cpp",
         "unordered_set": "cpp",
         "string": "cpp"
-    }
+    },
+    "python.pythonPath": "D:\\anaconda\\envs\\huawei\\python.exe"
 }

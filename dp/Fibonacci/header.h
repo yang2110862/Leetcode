@@ -10,7 +10,10 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <cfloat>
 #include <unordered_map>
+#include <unordered_set>
+#include <sstream>
 using namespace std;
 
 #endif

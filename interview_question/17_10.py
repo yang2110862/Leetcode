@@ -10,15 +10,15 @@ class Solution(object):
             if cnt == 0:
                 candidate = num
             if num == candidate:
-                ++cnt
+                cnt += 1
             else:
-                --cnt
+                cnt -= 1
         cnt = 0
         n = len(nums)
         for num in nums:
             if num == candidate:
-                ++cnt
+                cnt += 1
         if cnt > n / 2:
             return candidate
         else:
-            return true
+            return -1

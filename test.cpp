@@ -10,6 +10,7 @@ struct TreeNode {
 };
 
 int main() {
-    string x = "12";
-    cout << stoi(x);
+    vector<int> vec{1,3,5,7,9};
+    vector<int> vec2{9,7,5,3,1};
+    cout << *lower_bound(vec.begin(), vec.end(), 3);
 }

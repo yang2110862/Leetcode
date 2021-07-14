@@ -1,7 +1,4 @@
-a = 5
-b = 5
-a += 1
-a -= 1
-print(id(a))
-print(id(b))
-print(a is b)
+import bisect
+arr = [5,3,5,6]
+c = sorted(arr)
+print(arr[1])

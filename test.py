@@ -1,4 +1,4 @@
 import bisect
-arr = [5,3,5,6]
-c = sorted(arr)
-print(arr[1])
+arr = [3,3,5,6]
+beg = bisect.bisect_left(arr, 3)
+print(beg)

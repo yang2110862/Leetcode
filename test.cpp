@@ -10,7 +10,10 @@ struct TreeNode {
 };
 
 int main() {
-    vector<int> vec{1,3,5,7,9};
-    vector<int> vec2{9,7,5,3,1};
-    cout << *lower_bound(vec.begin(), vec.end(), 3);
+    unordered_map<TreeNode*, vector<int>> mp;
+    TreeNode* t = new TreeNode(3);
+    TreeNode* tt = new TreeNode(3);
+    mp[t].emplace_back(1);
+    mp[t].push_back(2);
+    cout << mp[t].size();
 }

@@ -1,4 +1,3 @@
 import bisect
-arr = [3,3,5,6]
-beg = bisect.bisect_left(arr, 3)
-print(beg)
+arr = [4] * 5
+print(arr[1])

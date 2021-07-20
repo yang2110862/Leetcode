@@ -1,4 +1,5 @@
  <!-- 滑动窗口模板 -->
+ 
 left,right = 0, (0 or 1)
 ret = total = 0
 while right < len(nums):

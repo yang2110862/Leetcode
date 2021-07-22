@@ -29,9 +29,9 @@ public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         ListNode* pA = headA, *pB = headB;
         while (pA != pB) {
-            headA == nullptr ? headB : pA->next;
-            headB == nullptr ? headA : pB->next;
+            pA = pA == nullptr ? headB : pA->next;
+            pB = pB == nullptr ? headA : pB->next;
         }
-        return headA;
+        return pA;
     }
 };

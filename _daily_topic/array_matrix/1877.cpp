@@ -4,6 +4,7 @@
 class Solution {
 public:
     int minPairSum(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
         int n = nums.size();
         int sum;
         int res = 0;
@@ -11,5 +12,6 @@ public:
             sum = nums[i] + nums[n - i - 1];
             res = max(res, sum);
         }
+        return res;
     }
 };

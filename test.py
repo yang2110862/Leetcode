@@ -1,3 +1,5 @@
 import bisect
-for i in range(0, 2):
-    print(i)
+a = 3
+b = a
+a = 4
+print(b)

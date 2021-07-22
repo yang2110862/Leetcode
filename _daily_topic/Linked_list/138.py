@@ -10,10 +10,10 @@ class Solution:
     def copyRandomList(self, head: Node):
         if head == None:
             return None
-        if head in Solution.mp:
-            return Solution.mp.get(head)
+        if head in self.mp:
+            return self.mp.get(head)
         newHead = Node(x = head.val)
-        Solution.mp[head] = newHead
+        self.mp[head] = newHead
         newHead.next = self.copyRandomList(head.next)
         newHead.random = self.copyRandomList(head.random)
         return newHead

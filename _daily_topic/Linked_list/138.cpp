@@ -1,4 +1,5 @@
 #include "header.h"
+// 复制带随机指针的链表
 class Node {
 public:
     int val;

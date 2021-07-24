@@ -10,4 +10,4 @@ class Solution:
             time[3] = '5'
         if time[4] == '?':
             time[4] = '9'
-        return time
+        return ''.join(time)

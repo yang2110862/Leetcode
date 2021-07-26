@@ -1,5 +1,3 @@
 import bisect
-a = 3
-b = a
-a = 4
-print(b)
+for i in range(0,3):
+    print(i)

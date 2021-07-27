@@ -1,5 +1,6 @@
 from typing import List
 from collections import defaultdict
+#有错
 class Solution:
     adj = defaultdict(list)
     def restoreArray(self, adjacentPairs: List[List[int]]) -> List[int]:

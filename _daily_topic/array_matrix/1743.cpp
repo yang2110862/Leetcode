@@ -1,5 +1,5 @@
 #include "header.h"
-
+//从相邻元素对还原数组
 class Solution {
 private:
     unordered_map<int, vector<int>> adj;

@@ -12,7 +12,7 @@ class Solution:
             return (1 << row - 1) + (1 << row) - 1 - label
         row = getRow(label)
         if row & 1 == 1:
-            label = getReverse(label)
+            label = getReverse(label, row)
         ans = []
         while row > 0:
             if row & 1 == 1:
@@ -21,5 +21,5 @@ class Solution:
                 ans.append(label)
             row -= 1
             label >>= 1
-        reversed(ans)
+        ans.reverse()
         return ans

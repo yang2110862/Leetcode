@@ -1,5 +1,5 @@
 #include "header.h"
-
+//二叉树中所有距离为K的结点
 struct TreeNode {
     int val;
     TreeNode* left;
@@ -40,5 +40,7 @@ private:
 public:
     vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
         findParents(root);
+        findAns(target, nullptr, 0, k);
+        return ans;
     }
 };

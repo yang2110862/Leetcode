@@ -16,12 +16,12 @@ private:
 public:
     vector<int> pathInZigZagTree(int label) {
         int row = getRow(label);
-        if (row & 1 == 0) {
+        if (row & 1 != 0) {
             label = getReverse(label, row);
         }
         vector<int> ans;
         while (row > 0) {
-            if (row & 1 == 0) ans.push_back(getReverse(label, row));
+            if (row & 1 != 0) ans.push_back(getReverse(label, row));
             else ans.push_back(label);
             --row;
             label >>= 1;

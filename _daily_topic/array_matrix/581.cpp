@@ -21,6 +21,7 @@ public:
                 right = i + 1;
             }
         }
+        if (right == 0 && left == n - 1) return 0;
         return right - left + 1;
     }
 };

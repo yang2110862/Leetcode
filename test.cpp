@@ -1,6 +1,20 @@
 #include "header.h"
+//二叉树的垂序遍历
 
+class Test {
+private:
+    static constexpr int RED = 1;
+public:
+    void hehe() {
+        int red = RED;
+        vector<int> arr(10, red);
+        cout << arr[0];
+    }
+};
 int main() {
-    vector<int> arr{1,2,3,4,5};
-    cout << lower_bound(arr.begin(), arr.end(), 3) - arr.begin();
+    // constexpr int RED = 1;
+    // vector<int> arr(10,RED);
+    // cout << arr[0]
+    Test test;
+    test.hehe();
 }

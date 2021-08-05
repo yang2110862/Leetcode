@@ -25,7 +25,7 @@ public:
         sort(nums.begin(), nums.end());
         int ans = 0;
         int n = nums.size();
-        for (int i = 0; i < n; +i) {
+        for (int i = 0; i < n; ++i) {
             int k = i + 1;
             for (int j = i + 1; j < n; ++j) {
                 while (k < n && nums[k] < nums[i] + nums[j]) {

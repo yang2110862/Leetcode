@@ -15,29 +15,26 @@ struct TreeNode {
 };
 
 class Solution {
+private:
+    vector<tuple<int, int, int>> nodes;
+    void dfs(TreeNode* node, int col, int row) {
+        if (node == nullptr) return;
+        nodes.emplace_back(col, row, node->val);
+        dfs(node->left, col - 1, row + 1);
+        dfs(node->right, col + 1, row + 1);
+    }
 public:
     vector<vector<int>> verticalTraversal(TreeNode* root) {
-        vector<tuple<int, int, int>> nodes;
-
-        function<void(TreeNode*, int, int)> dfs = [&](TreeNode* node, int row, int col) {
-            if (!node) {
-                return;
-            }
-            nodes.emplace_back(col, row, node->val);
-            dfs(node->left, row + 1, col - 1);
-            dfs(node->right, row + 1, col + 1);
-        };
-        
         dfs(root, 0, 0);
         sort(nodes.begin(), nodes.end());
         vector<vector<int>> ans;
-        int lastcol = INT_MIN;
-        for (const auto& [col, row, value]: nodes) {
-            if (col != lastcol) {
-                lastcol = col;
+        int lastCol = INT_MAX;
+        for (auto& node : nodes) {
+            if (get<0>(node) != lastCol) {
                 ans.emplace_back();
             }
-            ans.back().push_back(value);
+            ans.back().push_back(get<2>(node));
+            lastCol = get<0>(node);
         }
         return ans;
     }

@@ -35,12 +35,48 @@ public:
                 continue;
             }
             vector<bool> visited(n, false);
-            bool can_reach = dfs(i, graph, visited);
-            if (can_reach) {
+            bool flag = dfs(i, graph, visited);
+            if (flag) {
                 ans.push_back(i);
-                can_reach
+                can_reach.insert(i);
             }
             else cannot_reach.insert(i);
+        }
+        return ans;
+    }
+};
+
+//拓扑排序
+class Solution {
+public:
+    vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
+        int n = graph.size();
+        vector<vector<int>> rgraph(n);
+        vector<int> inDegree(n);
+        for (int x = 0; x < n; ++x) {
+            for (int y : graph[x]) {
+                rgraph[y].push_back(x);
+            }
+            inDegree[x] = graph[x].size();
+        }
+        queue<int> q;
+        for (int i = 0; i < n; ++i) {
+            if (inDegree[i] == 0) {
+                q.push(i);
+            }
+        }
+        while (!q.empty()) {
+            int x = q.front();
+            q.pop();
+            for (auto y : rgraph[x]) {
+                if (--inDegree[y] == 0) {
+                    q.push(y);
+                }
+            }
+        }
+        vector<int> ans;
+        for (int i = 0; i < n; ++i) {
+            if (inDegree[i] == 0) ans.push_back(i);
         }
         return ans;
     }

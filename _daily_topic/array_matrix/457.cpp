@@ -6,13 +6,14 @@ public:
         int n = nums.size();
         for (int i = 0; i < n; ++i) {
             int time = n;
-            int next = nums[i];
+            int next = i;
             if (nums[i] > 0) {
                 int k = 1;
                 int num = n;
                 while (num--) {
-                    next = (next + nums[i]) % n;
+                    next = (((next + nums[next]) % n) + n) % n;
                     if (next == i && k > 1) return true;
+                    if (next == i && k == 1) break;
                     if (nums[next] < 0) break;
                     ++k;
                 }
@@ -21,12 +22,20 @@ public:
                 int k = 1;
                 int num = n;
                 while (num--) {
-                    next = (((next + nums[i]) % n) + n) % n;
+                    next = (((next + nums[next]) % n) + n) % n;
                     if (next == i && k > 1) return true;
+                    if (next == i && k == 1) break;
                     if (nums[next] > 0) break;
+                    ++k;
                 }
             }
         }
         return false;
     }
 };
+
+int main() {
+    Solution test;
+    vector<int> nums{-1, -1};
+    cout << test.circularArrayLoop(nums);
+}

@@ -3,8 +3,7 @@
 
 
 int main() {
-    int n = 5;
-    int x = -6;
-    int ans = floor(0.3);
-    cout << ans;
+    string s = "abcd";
+    reverse(&s[0], &s[4]);
+    cout << s;
 }

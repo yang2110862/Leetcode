@@ -3,7 +3,7 @@
 
 
 int main() {
-    string s = "abcd";
-    reverse(&s[0], &s[4]);
-    cout << s;
+    vector<pair<int, int>> test;
+    test.emplace_back(1,5);
+    cout << test[0].second;
 }

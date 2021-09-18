@@ -29,11 +29,11 @@ public:
                 if (c == '.') continue;
                 int palace = compute_palace(i, j);
                 if (rows[i].count(c)) return false;
+                else rows[i].insert(c);
                 if (cols[j].count(c)) return false;
+                else cols[j].insert(c);
                 if (palaces[palace].count(c)) return false;
-                rows[i].insert(c);
-                cols[j].insert(c);
-                palaces[palace].insert(c);
+                else palaces[palace].insert(c);
             }
         }
         return true;

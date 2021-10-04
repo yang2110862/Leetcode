@@ -4,6 +4,7 @@ __builtin_popcount(x)  计算x二进制中含1的个数
 
 字符串：
 tolower(ch) 
+toupper(ch)
 isalnum(ch)        
 string b(s.rbegin(), s.rend())  
 stol(s)

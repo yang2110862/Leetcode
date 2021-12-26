@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "cmath": "cpp",
-        "array": "cpp",
-        "tuple": "cpp",
-        "utility": "cpp",
-        "iostream": "cpp"
-    }
-}

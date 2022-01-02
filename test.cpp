@@ -1,9 +1,10 @@
 #include "header.h"
+#include <cstring>
 //二叉树的垂序遍历
 
 
 int main() {
-    vector<pair<int, int>> test;
-    test.emplace_back(1,5);
-    cout << test[0].second;
+    int n = 9;
+    n = n >> 1;
+    cout << n;
 }

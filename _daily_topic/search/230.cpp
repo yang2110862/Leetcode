@@ -33,4 +33,23 @@ public:
     }
 };
 
+
 //迭代法
+class Solution {
+public:
+    int kthSmallest(TreeNode* root, int k) {
+        stack<TreeNode*> sk;
+        while (!sk.empty() || root) {
+            while (root) {
+                sk.push(root);
+                root = root->left;
+            }
+            root = sk.top();
+            sk.pop();
+            --k;
+            if (k == 0) return root->val;
+            root = root->right;
+        }
+        return -1;
+    }
+};

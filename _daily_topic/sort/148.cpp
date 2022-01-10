@@ -40,7 +40,7 @@ private:
                 p = p->next;
             } else {
                 p->next = p2;
-                p1 = p1->next;
+                p2 = p2->next;
                 p = p->next;
             }
         }

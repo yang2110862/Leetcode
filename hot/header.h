@@ -12,6 +12,9 @@
 #include <set>
 #include <cfloat>
 #include <unordered_map>
+#include <unordered_set>
+#include <climits>
+#include <sstream>
 using namespace std;
 
 #endif

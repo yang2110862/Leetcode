@@ -4,7 +4,7 @@
 
 
 int main() {
-    int n = 9;
-    n = n >> 1;
-    cout << n;
+    auto x = make_pair(4,5);
+    int y = min(x.second, 6);
+    cout << y;
 }

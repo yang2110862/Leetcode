@@ -7,8 +7,6 @@ public:
     int minDistance(string word1, string word2) {
         int m = word1.size(), n = word2.size();
         vector<vector<int>> dp(m + 1, vector<int>(n + 1));
-        if (m == 0) return n;
-        if (n == 0) return m;
         for (int i = 1; i <= m; ++i) {
             dp[i][0] = i;
         }
@@ -27,10 +25,3 @@ public:
         return dp[m][n];
     }
 };
-
-int main() {
-    Solution test;
-    string word1 = "horse";
-    string word2 = "ros";
-    cout << test.minDistance(word1, word2);
-}

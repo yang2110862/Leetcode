@@ -3,6 +3,7 @@
 //二叉树的垂序遍历
 
 int main() {
-    vector<bool> num(26);
-    cout << num[4];
+    int x = 15;
+    string y = to_string(x);
+    cout << y;
 }

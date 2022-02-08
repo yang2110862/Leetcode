@@ -13,7 +13,7 @@ public:
             ans[index++] = 1;
             for (int i = 1; i < bit; ++i) {
                 if (index > n) break;
-                ans[index++] = ans[i - 1] + 1;
+                ans[index++] = ans[i] + 1;
             }
             bit <<= 1;
         }

@@ -15,6 +15,7 @@
 #include <unordered_set>
 #include <climits>
 #include <sstream>
+#include <numeric>
 using namespace std;
 
 struct ListNode {    

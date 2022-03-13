@@ -1,12 +1,21 @@
 #include "header.h"
-#include <cstring>
-#include <exception>
-//二叉树的垂序遍历
 
-int f() {
-    cout << "2";
-    return 3;
-}
+class A {
+public:
+    virtual void func() {
+        cout << "a";
+    }
+};
+
+class B : public A {
+public:
+    // virtual void func() {
+    //     cout << "b";
+    // }
+};
+
 int main() {
-    f();
+    A a;
+    B b;
+    b.func();
 }

@@ -10,9 +10,8 @@ public:
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
         edges.resize(numCourses);
         for (const auto prerequisite : prerequisites) {
-            edges[prerequisite[0]].push_back(prerequisite[1]);
             edges[prerequisite[1]].push_back(prerequisite[0]);
-            inDegree[prerequisite[1]]++;
+            inDegree[prerequisite[0]]++;
         }
         queue<int> topology;
         for (int i = 0; i < numCourses; ++i) {

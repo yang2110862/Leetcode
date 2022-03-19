@@ -1,21 +1,12 @@
 #include "header.h"
 
-class A {
-public:
-    virtual void func() {
-        cout << "a";
-    }
-};
-
-class B : public A {
-public:
-    // virtual void func() {
-    //     cout << "b";
-    // }
-};
-
+#include <fstream>
+#include <algorithm>
+#include <string>
 int main() {
-    A a;
-    B b;
-    b.func();
-}
+    priority_queue<int, vector<int>, less<int>> q;
+    q.push(9);
+    q.push(8);
+    q.push(4);
+    cout << q.top();
+};

@@ -1,39 +1,26 @@
 #include "header.h"
 
+//dp
+
 class Solution {
-private:
-    int cumputer(string& floor, int index, int carpetLen) {
-        int cnt = 0;
-        while (carpetLen--) {
-            if (floor[index++] == '1') {
-                ++cnt;
-            }
-        }
-        return cnt;
-    }
 public:
     int minimumWhiteTiles(string floor, int numCarpets, int carpetLen) {
         int m = floor.size();
-        if (numCarpets * carpetLen >= m) return 0;
-        for (int i = 0; i < numCarpets; ++i) {
-            int index = 0;
-            int maxNum = 0;
-            int t = carpetLen;
-            for (int j = 0; j < m - carpetLen + 1; ++j) {
-                int cnt = cumputer(floor, j, carpetLen);
-                if (cnt > maxNum) {
-                    maxNum = cnt;
-                    index = j;
-                }
+        vector<vector<int>> dp(m + 1, vector<int>(numCarpets + 1));
+        for (int i = 1; i <= m; ++i) {
+            dp[i][0] = dp[i - 1][0] + floor[i - 1] - '0';
+        }        
+        for (int i = 1; i <= m; ++i) {
+            for (int j = 1; j <= numCarpets; ++j) {
+                dp[i][j] = min(dp[i - 1][j] + floor[i - 1] - '0', dp[max(i - carpetLen,0)][j - 1]);
             }
-            while (t--) {
-                floor[index++] = '0';
-            }
-        }  
-        int ans = 0;
-        for (auto c : floor) {
-            if (c == '1') ++ans;
         }
-        return ans;
+        return dp[m][numCarpets];
     }
 };
+
+int main() {
+    Solution test;
+    string floor = "1011";
+    cout << test.minimumWhiteTiles(floor, 1, 2);
+}
